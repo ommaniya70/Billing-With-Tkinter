@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+  <head>
+    <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Invoice</title>      
+      <style>
+        *{
+    padding: 0;
+    margin: 0;
+}
+table,td,th{
+    border: 1px,solid;
+    text-align: center;
+}
+
+#companyName{
+    width: 48%;
+    color: red;
+    text-align: center;
+}
+
+#nameDiv{
+    display: inline-block;
+    width: 36%;
+}
+
+#dateDiv{
+    display: inline-block;
+    width: 30%;
+}
+
+#jangad{
+    display: inline-block;
+}
+
+#date{
+    display: block;
+}
+
+#nameAndDateDiv h3{
+    width: 48%;
+}
+
+th{
+   background-color: red;
+   color: white; 
+}
+
+table{
+    width: 48%;
+    border-collapse: collapse;
+    border-color: red;
+}
+
+      </style>
+  </head>
+  <body>
+    <div id="MainBillDiv">
+      <div id="companyNameDiv">
+        <h1 id="companyName">x</h1>
+      </div>
+
+      <div id="nameAndDateDiv">
+        <div id="nameDiv">
+          <h3>Name : {name}</h3>
+        </div>
+
+
+      </div>
+      <table border="2px">
+        <thead>
+          <tr>
+            <th>Sr. No.</th>
+            <th>Dimond</th>
+            <th>Weight</th>
+            <th>PI Top</th>
+            <th>PI Weight</th>
+            <th>Top</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for key,value in data.items() %}
+            <tr>
+              <td>{{ key }}</td>
+              <td>{{ value[0] }}</td>
+              <td>{{ value[1] }}</td>
+              <td>{{ value[2] }}</td>
+              <td>{{ value[3] }}</td>
+              <td>{{ value[4] }}</td>
+              <td>{{ value[5] }}</td>
+            </tr>
+          {% endfor %}    
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>

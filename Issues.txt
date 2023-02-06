@@ -1,0 +1,2 @@
+Totals should not be deleted by user
+PITop and PIWeight is not updating if we first check checkbox and then edit weight
